@@ -241,10 +241,81 @@
         width: 100%;
       }
     }
+    /* Smooth anchor scrolling */
+html { scroll-behavior: smooth; }
+
+/* Top navigation */
+.topnav {
+  position: sticky; /* stays at the top when scrolling */
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid #dee2e6;
+}
+
+.topnav .nav-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.topnav .brand {
+  font-family: 'Lora', serif;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #212529;
+}
+
+.topnav .nav-links {
+  margin-left: auto;
+  display: flex;
+  gap: 18px;
+}
+
+.topnav .nav-links a {
+  font-weight: 600;
+  color: #495057;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.topnav .nav-links a:hover {
+  color: #007bff;
+  text-decoration: none;
+  background: #f1f3f5;
+}
+
+/* Ensure anchors are not hidden under the sticky nav */
+section { scroll-margin-top: 80px; }
+
+/* Optional: tighten top spacing since we now have a nav bar */
+.container { margin-top: 24px; }
+
+/* Mobile: stack links under brand */
+@media (max-width: 768px) {
+  .topnav .nav-inner { flex-wrap: wrap; }
+  .topnav .nav-links { width: 100%; margin-left: 0; justify-content: space-between; }
+}
+
   </style>
 </head>
 
 <body>
+  <nav class="topnav">
+  <div class="nav-inner">
+    <a class="brand" href="#">Mohor Banerjee</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#internships">Internships</a>
+      <a href="#projects">Projects</a>
+    </div>
+  </div>
+</nav>
   <div class="container">
     <header class="header">
       <div class="header-text">
@@ -274,7 +345,8 @@
     </header>
 
     <main>
-<section>
+      
+<section id="about">
   <h2>About Me</h2>
   <p>
     I am a final-year Computer Science undergraduate at 
@@ -317,7 +389,7 @@
 
 
       
-<section>
+<section id="publications">
   <h2>Publications</h2>
   <ul class="list">
     <li>
@@ -417,7 +489,7 @@
   </ul>
 </section>
 
-<section>
+<section id="internships">
   <h2>Internships</h2>
   <ul class="list">
     <li>
@@ -464,7 +536,7 @@
   </ul>
 </section>
 
-<section>
+<section id="projects">
   <h2>Projects</h2>
   <ul class="list">
     <li>
