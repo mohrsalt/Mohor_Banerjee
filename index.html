@@ -14,6 +14,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
+    .publication-thumbnail {
+  width: 80px;       /* size of the square */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;  /* crop overflow */
+  border-radius: 10px; /* optional: rounded corners */
+  background: #f1f1f1; /* optional: neutral background */
+}
+
+.publication-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* or "cover" depending on what you want */
+}
+
     /* Basic Page Setup */
     body {
       font-family: 'Inter', sans-serif;
