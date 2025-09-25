@@ -1,4 +1,4 @@
-This is the source code my [homepage](https://mohrsalt.github.io/Mohor_Banerjee/) adopted from Jon Barron's [public academic website](https://jonbarron.info/), many thanks to him for sharing it openly.
+This is the source code for my [homepage](https://mohrsalt.github.io/Mohor_Banerjee/) adopted from Jon Barron's [public academic website](https://jonbarron.info/), many thanks to him for sharing it openly.
 
 The following is his message:
 
